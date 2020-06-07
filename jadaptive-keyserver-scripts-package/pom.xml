@@ -3,16 +3,11 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<packaging>pom</packaging>
-
-	<parent>
-		<groupId>com.sshtools</groupId>
-		<artifactId>mobile-agent-group</artifactId>
-		<relativePath>..</relativePath>
-		<version>2.0.0-SNAPSHOT</version>
-	</parent>
 	
+	<groupId>com.sshtools</groupId>
 	<artifactId>jadaptive-keyserver-scripts</artifactId>
 	<name>JADAPTIVE Keyserver Scripts Package (DEB,RPM)</name>
+	<version>0.0.2-SNAPSHOT</version>
 	
 	<properties>
 		<!-- Should be set by Jenkins when building for specific major version -->
