@@ -16,7 +16,7 @@ public class SyncAuthorizedKeys {
 
 	public static void main(String[] args) {
 		
-		String url = "https://gateway.sshtools.com/";
+		String url = "https://gateway.jadaptive.com/";
 		if(args.length > 0) {
 			url = args[0];
 			if(!url.endsWith("/")) {
@@ -70,9 +70,7 @@ public class SyncAuthorizedKeys {
 			ex.printStackTrace();
 			System.exit(1);
 		}
-		
-		URL machineURL = new 
-		
+
 		if(staticKeys.exists()) {
 			
 			System.out.println("Adding static keys from ~/.ssh/static_keys");

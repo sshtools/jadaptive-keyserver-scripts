@@ -5,7 +5,7 @@
 #
 # The default hostname or IP address of the gateway from which to retrieve keys.
 #
-GATEWAY_HOST=gateway.sshtools.com
+GATEWAY_HOST=gateway.jadaptive.com
 
 # Allow incorrect SSL certificates when connecting to the 
 # GATEWAY_HOST.
