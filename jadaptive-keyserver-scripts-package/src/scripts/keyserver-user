@@ -7,27 +7,27 @@
 #
 # 1. Show all authorized users for this user
 #
-# auth-keyserver-user
+# keyserver-user
 #
 # 2. Add a new gateway email address that is allowed to authenticate as this user
 #
-# auth-keyserver-user --add auser@acompany.com
+# keyserver-user --add auser@acompany.com
 #
 # 3. Remove a gateway address from those allowed to authenticate as this user
 #
-# auth-keyserver-user --remove auser@acompany.com
+# keyserver-user --remove auser@acompany.com
 #
 # 4. Show all globally authorized users 
 #
-# auth-keyserver-user --system
+# keyserver-user --system
 #
 # 5. Add a new gateway email address that is allowed to authenticate as any user
 #
-# auth-keyserver-user --add --system auser@acompany.com
+# keyserver-user --add --system auser@acompany.com
 #
 # 6. Remove a gateway address from those allowed to authenticate as any user
 #
-# auth-keyserver-user --remove --system auser@acompany.com
+# keyserver-user --remove --system auser@acompany.com
  
 
 # Constants
