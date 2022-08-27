@@ -3,6 +3,8 @@
 user_home="${1}"
 user_name="${2}"
 
+trap "" SIGPIPE
+
 # Get configuration
 source /etc/default/jadaptive-keyserver
 if [ -z "${GATEWAY_HOST}" ]; then
