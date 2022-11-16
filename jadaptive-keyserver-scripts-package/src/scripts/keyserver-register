@@ -1,0 +1,23 @@
+#!/bin/bash
+
+user_name="${1}"
+
+trap "" SIGPIPE
+
+# Get configuration
+source /etc/default/jadaptive-keyserver
+if [ -z "${GATEWAY_HOST}" ]; then
+	GATEWAY_HOST=gateway.sshtools.com
+fi
+if [ -z "${ALLOW_INSECURE_GATEWAY}" ]; then
+	ALLOW_INSECURE_GATEWAY=N
+fi
+
+# Init
+curl_opts=
+case "${ALLOW_INSECURE_GATEWAY}" in
+	y*|Y*) curl_opts="-k" ;;
+esac 
+
+# Register
+curl ${curl_opts} -sf "https://${GATEWAY_HOST}/assignedKeys/${MACHINE_ID}/${user_name}/`hostname`?register=1"
