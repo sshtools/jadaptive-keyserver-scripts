@@ -7,7 +7,7 @@
 	<groupId>com.sshtools</groupId>
 	<artifactId>jadaptive-keyserver-scripts</artifactId>
 	<name>JADAPTIVE Keyserver Scripts Package (DEB,RPM)</name>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	
 	<properties>
 		<!-- Should be set by Jenkins when building for specific major version -->

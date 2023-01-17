@@ -14,6 +14,7 @@ if [ -z "${ALLOW_INSECURE_GATEWAY}" ]; then
 	ALLOW_INSECURE_GATEWAY=N
 fi
 
+
 # Init
 curl_opts=
 case "${ALLOW_INSECURE_GATEWAY}" in
@@ -38,7 +39,7 @@ fi
 # User
 if [ -f "${user_home}/.ssh/authorized_users" ] ; then
 	while read line; do
-		out=$(curl ${curl_opts} -sf "https://${GATEWAY_HOST}/authorizedKeys/${line}")
+		out=$(curl ${curl_opts} --header "X-Domain-Authorization: ${DOMAIN_KEY}" -sf "https://${GATEWAY_HOST}/authorizedKeys/${line}")
 		if [ -n "${out}" ]; then
 		  echo "${out}"
 		fi
@@ -46,7 +47,7 @@ if [ -f "${user_home}/.ssh/authorized_users" ] ; then
 fi
 
 # Remote
-out=$(curl ${curl_opts} -sf "https://${GATEWAY_HOST}/assignedKeys/${MACHINE_ID}/${user_name}/`hostname`")
+out=$(curl ${curl_opts} --header "X-Domain-Authorization: ${DOMAIN_KEY}" -sf "https://${GATEWAY_HOST}/assignedKeys/${MACHINE_ID}/${user_name}/`hostname`")
 if [ -n "${out}" ]; then
     echo "${out}"
 fi
@@ -54,7 +55,7 @@ fi
 # Global
 if [ -f "/etc/security/authorized_users" ] ; then
 	while read line; do
-		out=$(curl ${curl_opts} -sf "https://${GATEWAY_HOST}/authorizedKeys/${line}")
+		out=$(curl ${curl_opts} --header "X-Domain-Authorization: ${DOMAIN_KEY}" -sf "https://${GATEWAY_HOST}/authorizedKeys/${line}")
 		if [ -n "${out}" ]; then
 		   echo "${out}"
 		fi

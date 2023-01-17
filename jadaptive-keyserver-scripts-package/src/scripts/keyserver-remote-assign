@@ -20,4 +20,4 @@ case "${ALLOW_INSECURE_GATEWAY}" in
 esac 
 
 # Register
-curl ${curl_opts} -sf "https://${GATEWAY_HOST}/assignedKeys/${MACHINE_ID}/${user_name}/`hostname`?register=1"
+curl ${curl_opts} --header "X-Domain-Authorization: ${DOMAIN_KEY}" -sf "https://${GATEWAY_HOST}/assignedKeys/${MACHINE_ID}/${user_name}/`hostname`?register=1"
