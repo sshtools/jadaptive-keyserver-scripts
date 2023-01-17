@@ -1,6 +1,6 @@
 if [ -w /etc/ssh/sshd_config -a -w /etc/ssh ] ; then
 
-    echo "# DO NOT CHANGE\nMACHINE_ID=`mktemp -u XXXXXXXXXXXXXXXXXXXXXXXX`" >> /etc/default/jadaptive-keyserver
+    echo "MACHINE_ID=`mktemp -u XXXXXXXXXXXXXXXXXXXXXXXX`" >> /etc/default/jadaptive-keyserver
     
     version_raw=`ssh -V 2>&1`
     major_version=`echo "${version_raw}" | sed 's/^.*_\([0-9]\)\.[0-9].*$/\1/'`

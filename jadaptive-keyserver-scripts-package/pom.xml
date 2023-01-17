@@ -120,7 +120,7 @@
 					<name>jadaptive-keyserver-scripts</name>
 					<group>Application/Internet</group>
 					<packager>JADAPTIVE Limited</packager>
-					<copyright>2020 JADAPTIVE Limited</copyright>
+					<copyright>2023 JADAPTIVE Limited</copyright>
 					<prefix>/usr</prefix>
 					<defineStatements>
 						<defineStatement>_unpackaged_files_terminate_build 0</defineStatement>
@@ -143,6 +143,9 @@
 								</source>
 								<source>
 									<location>${basedir}/src/scripts/keyserver-authorized-keys</location>
+								</source>
+								<source>
+									<location>${basedir}/src/scripts/keyserver-remote-assign</location>
 								</source>
 								<source>
 									<location>${basedir}/src/scripts/keyserver-sync</location>

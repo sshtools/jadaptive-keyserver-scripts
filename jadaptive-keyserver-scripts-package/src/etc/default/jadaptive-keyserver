@@ -7,6 +7,12 @@
 #
 GATEWAY_HOST=gateway.jadaptive.com
 
+# Domain Key
+#
+# Used to authenticate to your key server domain
+#
+DOMAIN_KEY=
+
 # Allow incorrect SSL certificates when connecting to the 
 # GATEWAY_HOST.
 #
